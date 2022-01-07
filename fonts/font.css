@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Unispace-Regular';
+  src: url('Unispace-Regular.svg#Unispace-Regular') format('svg'),
+       url('Unispace-Regular.ttf') format('truetype'),
+       url('Unispace-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'unispace rg';
+  src: url('unispace rg.eot');
+  src: url('unispace rg.eot?#iefix') format('embedded-opentype'),
+       url('unispace rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
