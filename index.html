@@ -5,69 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dethcrvsh</title>
 </head>
 <body id="root">
     <div class="container">
+        <h1 id="construction">Under Construction</h1>
         <div id="content">
-            <h1>TEST</h1>
-            <p>Tjena tjena.</p>
-            <a>Click me!</a>
-            <h2>====================</h2>
+            <p>Hello, I'm Dethcrvsh, a 23-year-old student currently working towards my Master of Science in 
+            Computer Science and Software Engineering at Linköping University. This website is supposed to serve 
+            as a digital resumee of sorts as well as a place for my old projects to live. As of now, it's EXTREMELY
+            unfinished. In the meantime, here's my <a href="https://github.com/Dethcrvsh">Github</a> 
+            and some old <a href="game-jam.html">Game Jam projects</a> I have been a part of.</p>
         </div>
         <canvas id="canvas"></canvas>
     </div>
 </body>
-<script>
-    let canvas;
-    let ctx;
-    let movingChar;
-
-    window.onload = init;
-
-    function init(){
-        canvas = document.getElementById("canvas");
-        ctx = canvas.getContext("2d");
-        let root = document.getElementById("root");
-
-        ctx.canvas.width  = root.offsetWidth;
-        ctx.canvas.height = root.scrollHeight;
-
-        // Start the first frame request
-        window.requestAnimationFrame(gameLoop);
-        movingChar = new MovingChar(ctx.canvas.width + 48, 600);
-    }
-
-    function gameLoop(timeStamp){
-        draw();
-
-        // Keep requesting new frames
-        window.requestAnimationFrame(gameLoop);
-    }
-
-    function draw(){
-        ctx.clearRect(48, 48, movingChar.x, movingChar.y);
-
-        ctx.font = '48px serif';
-        ctx.fillStyle = "#FCEFF9";
-        movingChar.move();
-        ctx.fillText(movingChar.char, movingChar.x, movingChar.y);
-    }
-
-    class MovingChar {
-        constructor(x, y) {
-            let CHARACTERS = "=*/+~^{}()[]!#%&";
-            let randIndex = Math.floor((Math.random() * CHARACTERS.length));
-
-            this.char = CHARACTERS[randIndex];
-            this.x = x;
-            this.y = y;
-        }
-
-        move() {
-            this.x = this.x - 4;
-        }
-    }
-
-</script>
 </html>
+
+<!-- Written by a closeted trans girl :3 -->
