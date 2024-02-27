@@ -1,32 +1,48 @@
+:root {
+	--background: #050401;
+	--content-background: #252630;
+	--text: #DCD7C9;
+	--highlight: #FFAFCC;
+	--highlight2: #CDB4DB;
+	--link: #A2D2FF;
+	--active: #A2D2FF;
+}
+
 @font-face {
     font-family: Hack;
-    src: url(fonts/Hack-Bold.ttf);
+    src: url(fonts/HackNerdFont-Bold.ttf);
 }
 
 body {
     padding: 0;
     margin: 0;
-    background-color: #050401;
+    background-color: var(--background);
 }
 
 h1 {
-    color: #C060A1;
+    color: var(--highlight);
     font-family: 'Hack', monospace;
 }
 
 h2 {
-    color: rgb(4, 4, 4);
+    color: var(--highlight);
     font-family: 'Hack', monospace;
 }
 
+h3 {
+    color: var(--highlight2);
+    font-family: 'Hack', monospace;
+    margin-left: 15px;
+}
+
 p {
-    color: #DCD7C9;
+    color: var(--text);
     font-family: 'Hack', monospace;
     font-size: 15px;
 }
 
 ul {
-    color: #DCD7C9;
+    color: var(--text);
     font-family: 'Hack', monospace;
     font-size: 15px;
 }
@@ -36,7 +52,7 @@ li {
 }
 
 a {
-    color: #C060A1;
+    color: var(--link);
     font-family: 'Hack', monospace;
 }
 
@@ -47,10 +63,63 @@ a {
     box-sizing: border-box;
 }
 
+#menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*align-items: flex-end;*/
+    margin-bottom: 20px;
+}
+
+#menu a {
+    text-decoration: None;
+}
+
+#nav {
+    font-size: 18px;
+	padding-top: 3px;
+	max-width: 700px;
+}
+
+#nav-head * {
+	display: inline;
+	margin-right: 25px;
+}
+
+#nav-sub * {
+	display: inline;
+}
+
+#nav-sub p {
+	color: var(--highlight);
+	font-size: 20px;
+	margin: 0 15px 0 25px;
+}
+
+#nav-sub a {
+	color: var(--highlight2);
+	font-size: 16px;		
+	margin-right: 20px;
+}
+
+#nav-active {
+    margin: 0;
+    padding: 0;
+}
+
+#links {
+    font-size: 25px;
+}
+
+#links * {
+    margin: 0 7px 0 7px;
+}
+
 #content {
-    background-color: #1A1B25;
+    background-color: var(--content-background);
     padding: 1em;
-    outline: 2px solid #C060A1;
+    outline: 2px solid var(--highlight); 
     border-radius: 5px;
 }
 
@@ -58,13 +127,18 @@ a {
     text-align: center;
     font-size: 50px;
     margin-top: 100px;
-    margin-bottom: 150px;
+    margin-bottom: 75px;
 }
 
 .center {
     text-align: center;
 }
 
-.title {
-    margin-bottom: 75px;
+.active {
+    text-decoration: underline !important;
+    text-decoration-color: var(--highlight) !important;
+    text-decoration-thickness: 2px !important;
+    color: var(--active) !important;
+    display: flex;
 }
+
