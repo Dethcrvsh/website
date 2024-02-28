@@ -24,6 +24,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--background);
+	-webkit-font-smoothing: subpixel-antialised;
 }
 
 h1 {
@@ -187,3 +188,4 @@ a {
 	padding-top: 15px;
 	margin-right: calc(var(--tab-width));
 }
+
