@@ -1,16 +1,23 @@
 :root {
 	--background: #050401;
 	--content-background: #252630;
-	--text: #DCD7C9;
+	--text: #FFFFF0 ;
 	--highlight: #FFAFCC;
 	--highlight2: #CDB4DB;
 	--link: #A2D2FF;
 	--active: #A2D2FF;
+
+	--tab-width: 25px;
+}
+
+@font-face {
+    font-family: Hack-Bold;
+    src: url(fonts/HackNerdFont-Bold.ttf);
 }
 
 @font-face {
     font-family: Hack;
-    src: url(fonts/HackNerdFont-Bold.ttf);
+    src: url(fonts/HackNerdFont-Regular.ttf);
 }
 
 body {
@@ -21,29 +28,42 @@ body {
 
 h1 {
     color: var(--highlight);
-    font-family: 'Hack', monospace;
+    font-family: 'Hack-Bold', monospace;
 }
 
 h2 {
     color: var(--highlight);
-    font-family: 'Hack', monospace;
+    font-family: 'Hack-Bold', monospace;
 }
 
 h3 {
     color: var(--highlight2);
-    font-family: 'Hack', monospace;
-    margin-left: 15px;
+    font-family: 'Hack-Bold', monospace;
+	margin-left: var(--tab-width);
+}
+
+h2 + p {
+	margin-left: var(--tab-width);
+}
+
+h3 + p, .info-list + p {
+	margin-left: calc(var(--tab-width) * 2);
 }
 
 p {
     color: var(--text);
-    font-family: 'Hack', monospace;
-    font-size: 15px;
+    font-family: 'Hack-Bold', monospace;
+    font-size: 14px;
+	margin-bottom: 25px;
+}
+
+b {
+    color: var(--highlight);
 }
 
 ul {
     color: var(--text);
-    font-family: 'Hack', monospace;
+    font-family: 'Hack-Bold', monospace;
     font-size: 15px;
 }
 
@@ -53,7 +73,7 @@ li {
 
 a {
     color: var(--link);
-    font-family: 'Hack', monospace;
+    font-family: 'Hack-Bold', monospace;
 }
 
 .container {
@@ -145,3 +165,27 @@ a {
     display: flex;
 }
 
+.info-list {
+	display: flex;
+	flex-wrap: row;
+	justify-content: space-between;
+}
+
+.info-list * {
+	display: inline;
+}
+
+.info-list h2, .info-list h3 {
+	margin-right: 25px;
+}
+
+.info-list a {
+	font-size: 25px;
+	margin-right: 15px;
+	text-decoration: None;
+}
+
+.info-list div {
+	padding-top: 15px;
+	margin-right: calc(var(--tab-width));
+}
