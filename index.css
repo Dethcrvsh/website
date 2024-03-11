@@ -190,3 +190,8 @@ a {
 	margin-right: calc(var(--tab-width));
 }
 
+#footer {
+    margin-top: 100px;
+}
+
+
