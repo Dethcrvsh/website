@@ -80,6 +80,11 @@ li {
 a {
     color: var(--link);
     font-family: 'Hack-Bold', monospace;
+    text-decoration: None;
+}
+
+ul {
+    color: var(--highlight);
 }
 
 .container {
