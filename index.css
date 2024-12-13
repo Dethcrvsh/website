@@ -1,23 +1,23 @@
 :root {
-	--background: #050401;
-	--content-background: #252630;
-	--text: #FFFFF0 ;
-	--highlight: #FFAFCC;
-	--highlight2: #CDB4DB;
-	--link: #A2D2FF;
-	--active: #A2D2FF;
+	--background: #1e1e2e;
+	--content-background: #313244;
+	--text: #f5e0dc;
+	--highlight: #f38ba8;
+	--highlight2: #f9e2af;
+	--link: #74c7ec;
+	--active: #74c7ec;
 
 	--tab-width: 3%;
 }
 
 @font-face {
     font-family: Hack-Bold;
-    src: url(fonts/HackNerdFont-Bold.ttf);
+    src: url(fonts/IosevkaNerdFont-SemiBold.ttf);
 }
 
 @font-face {
     font-family: Hack;
-    src: url(fonts/HackNerdFont-Regular.ttf);
+    src: url(fonts/IosevkaNerdFont-SemiBoldItalic.ttf);
 }
 
 body {
@@ -32,7 +32,7 @@ h1 {
     color: var(--highlight);
     font-family: 'Hack-Bold', monospace;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     margin-top: 100px;
     margin-bottom: 75px;
 }
@@ -40,11 +40,13 @@ h1 {
 h2 {
     color: var(--highlight);
     font-family: 'Hack-Bold', monospace;
+    font-size: 32px;
 }
 
 h3 {
     color: var(--highlight2);
     font-family: 'Hack-Bold', monospace;
+    font-size: 25px;
 	margin-left: var(--tab-width);
 }
 
@@ -59,7 +61,7 @@ h3 + p, .info-list + p {
 p {
     color: var(--text);
     font-family: 'Hack-Bold', monospace;
-    font-size: 14px;
+    font-size: 16px;
 	margin-bottom: 25px;
 }
 
@@ -70,7 +72,7 @@ b {
 ul {
     color: var(--text);
     font-family: 'Hack-Bold', monospace;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 li {
@@ -79,7 +81,7 @@ li {
 
 a {
     color: var(--link);
-    font-family: 'Hack-Bold', monospace;
+    font-family: 'Hack', monospace;
     text-decoration: None;
 }
 
@@ -107,7 +109,7 @@ ul {
 }
 
 #nav {
-    font-size: 18px;
+    font-size: 22px;
 	padding-top: 3px;
 	max-width: 700px;
 }
@@ -128,13 +130,13 @@ ul {
 
 #nav-sub p {
 	color: var(--highlight);
-	font-size: 20px;
+	font-size: 28px;
 	margin-right: 15px;
 }
 
 #nav-sub a {
 	color: var(--highlight2);
-	font-size: 16px;		
+	font-size: 20px;		
 	margin-right: 20px;
 }
 
@@ -144,7 +146,7 @@ ul {
 }
 
 #links {
-    font-size: 25px;
+    font-size: 32px;
 }
 
 #links * {
@@ -185,7 +187,7 @@ ul {
 }
 
 .info-list a {
-	font-size: 25px;
+	font-size: 32px;
 	margin-right: 15px;
 	text-decoration: None;
 }
