@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1qkjlf52ohpo"
-path="res://.godot/imported/operation-shell-shock.icon.png-c0bd3ebc643ccdff8d3ef5f4a1635eaf.ctex"
+uid="uid://wiayeum1igs7"
+path="res://.godot/imported/operation-shell-shock.icon.png-ec8fddb158208e5aba35930b7a7bce69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/web/operation-shell-shock.icon.png"
-dest_files=["res://.godot/imported/operation-shell-shock.icon.png-c0bd3ebc643ccdff8d3ef5f4a1635eaf.ctex"]
+source_file="res://build/operation-shell-shock.icon.png"
+dest_files=["res://.godot/imported/operation-shell-shock.icon.png-ec8fddb158208e5aba35930b7a7bce69.ctex"]
 
 [params]
 

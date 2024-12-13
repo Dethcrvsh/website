@@ -59,7 +59,7 @@ h3 + p, .info-list + p {
 p {
     color: var(--text);
     font-family: 'Hack-Bold', monospace;
-    font-size: 14px;
+    font-size: 12px;
 	margin-bottom: 25px;
 }
 
