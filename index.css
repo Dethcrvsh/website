@@ -1,13 +1,13 @@
 :root {
-	--background: #1e1e2e;
-	--content-background: #313244;
-	--text: #f5e0dc;
-	--highlight: #f38ba8;
-	--highlight2: #f9e2af;
-	--link: #74c7ec;
-	--active: #74c7ec;
+    --background: #1e1e2e;
+    --content-background: #313244;
+    --text: #f5e0dc;
+    --highlight: #f38ba8;
+    --highlight2: #f9e2af;
+    --link: #74c7ec;
+    --active: #74c7ec;
 
-	--tab-width: 3%;
+    --tab-width: 3%;
 }
 
 @font-face {
@@ -17,15 +17,15 @@
 
 @font-face {
     font-family: Hack;
-    src: url(fonts/IosevkaNerdFont-SemiBoldItalic.ttf);
+    src: url(fonts/IosevkaNerdFont-SemiBold.ttf);
 }
 
 body {
     padding: 0;
     margin: 0;
     background-color: var(--background);
-	-webkit-font-smoothing: subpixel-antialiased;
-	letter-spacing: 0px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: 0px;
 }
 
 h1 {
@@ -35,34 +35,46 @@ h1 {
     font-size: 60px;
     margin-top: 100px;
     margin-bottom: 75px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 h2 {
     color: var(--highlight);
     font-family: 'Hack-Bold', monospace;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 h3 {
     color: var(--highlight2);
     font-family: 'Hack-Bold', monospace;
-    font-size: 25px;
-	margin-left: var(--tab-width);
+    font-size: 22px;
+    margin-left: var(--tab-width);
 }
 
-h2 + p {
-	margin-left: var(--tab-width);
+h2+p {
+    margin-left: var(--tab-width);
 }
 
-h3 + p, .info-list + p {
-	margin-left: calc(var(--tab-width) * 2);
+h3+p,
+.info-list+p {
+    margin-left: calc(var(--tab-width) * 2);
 }
 
 p {
     color: var(--text);
     font-family: 'Hack-Bold', monospace;
-    font-size: 16px;
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 b {
@@ -73,20 +85,43 @@ ul {
     color: var(--text);
     font-family: 'Hack-Bold', monospace;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 li {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+    list-style: none;
+    margin-left: -12px;
+}
+
+ul li::before {
+    content: '\f503';
+    /* Unicode for your custom glyph (example) */
+    font-family: "Hack-Bold";
+    /* Specify your custom font */
+    font-size: 16px;
+    /* Adjust the size of the glyph */
+    color: var(--highlight2);
+    /* Customize color */
+    margin-right: 20px;
+    /* Space between bullet and text */
+    display: inline-block;
+}
+
+ul li:has(> ul)::before {
+    content: '\f115';
 }
 
 a {
     color: var(--link);
     font-family: 'Hack', monospace;
     text-decoration: None;
+    transition: color 0.3s ease;
 }
 
-ul {
-    color: var(--highlight);
+a:hover {
+    color: #b4befe;
+    text-shadow: 0 0 10px #b4befe, 0 0 20px #b4befe, 0 0 30px #b4befe;
 }
 
 .container {
@@ -110,34 +145,34 @@ ul {
 
 #nav {
     font-size: 22px;
-	padding-top: 3px;
-	max-width: 700px;
+    padding-top: 3px;
+    max-width: 700px;
 }
 
 #nav-head * {
-	display: inline;
-	margin-right: 25px;
+    display: inline;
+    margin-right: 25px;
 }
 
 #nav-sub {
-	margin-top: 5px;
-	margin-left: 25px;
+    margin-top: 5px;
+    margin-left: 25px;
 }
 
 #nav-sub * {
-	display: inline;
+    display: inline;
 }
 
 #nav-sub p {
-	color: var(--highlight);
-	font-size: 28px;
-	margin-right: 15px;
+    color: var(--highlight);
+    font-size: 28px;
+    margin-right: 15px;
 }
 
 #nav-sub a {
-	color: var(--highlight2);
-	font-size: 20px;		
-	margin-right: 20px;
+    color: var(--highlight2);
+    font-size: 20px;
+    margin-right: 20px;
 }
 
 #nav-active {
@@ -156,7 +191,7 @@ ul {
 #content {
     background-color: var(--content-background);
     padding: 1em;
-    outline: 2px solid var(--highlight); 
+    outline: 2px solid var(--highlight);
     border-radius: 5px;
 }
 
@@ -173,32 +208,39 @@ ul {
 }
 
 .info-list {
-	display: flex;
-	flex-wrap: row;
-	justify-content: space-between;
+    display: flex;
+    flex-wrap: row;
+    justify-content: space-between;
 }
 
 .info-list * {
-	display: inline;
+    display: inline;
 }
 
-.info-list h2, .info-list h3 {
-	margin-right: 25px;
+.info-list h2,
+.info-list h3 {
+    margin-right: 25px;
 }
 
 .info-list a {
-	font-size: 32px;
-	margin-right: 15px;
-	text-decoration: None;
+    font-size: 32px;
+    margin-right: 15px;
+    text-decoration: None;
 }
 
 .info-list div {
-	padding-top: 15px;
-	margin-right: calc(var(--tab-width));
+    padding-top: 15px;
+    margin-right: calc(var(--tab-width));
+}
+
+.game {
+    aspect-ratio: 16 / 9;
+    margin: 50px;
+    width: calc(100% - 100px);
+    height: auto;
+    display: block;
 }
 
 #footer {
     margin-top: 100px;
 }
-
-
