@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dethcrvsh - Projects</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+
+</head>
+
+<body id="root">
+    <div class="container">
+        <h1>Dethcrvsh</h1>
+        <div id="menu">
+            <div id="nav">
+                <div id="nav-head">
+                    <a href="index.html">Start</a>
+                    <a class="active" href="projects.html">Projects</a>
+                    <a href="files.html">Files</a>
+                </div>
+                <div id="nav-sub">
+                    <p class="pred">󰉋</p>
+                    <a href="projects.html">Projects</a>
+                    <p class="sep">/</p>
+                    <a href="projects.html">Game Jam</a>
+                    <p class="sep">/</p>
+                    <a href="conjuring-carpentry.html">Conjuring Carpentry</a>
+                </div>
+            </div>
+            <div id="links">
+                <a href="https://github.com/Dethcrvsh"> </a>
+                <a href=""></a>
+                <a href="mailto:fabian.johansson00@gmail.com"> </a>
+            </div>
+        </div>
+        <div id="content">
+            <h2>> Conjuring Carpentry</h2>
+            <div class="game">
+                <div>
+                    <div>
+                        <a href="https://github.com/Dethcrvsh/carpentry-conjuring"></a>
+                        <a href="https://dethcrvsh.itch.io/conjuring-carpentry"></a>
+                        <a href="game-jam/files/conjuring-carpentry.html"></a>
+                    </div>
+                    <iframe class="game" src="game-jam/files/conjuring-carpentry.html"></iframe>
+                </div>
+                <!-- <a></a> -->
+            </div>
+            <h3>> LIU Game Jam</h3>
+            <p>
+                Over the years, I have been part of my fair share of game jams. For the last two, I have actually helped
+                organize them! It is an event hosted by
+                <a href="https://en.lithekod.se/gamejam/">LiTHe Kod</a> where
+                the
+                goal is to create a game in 48h hours. This encompasses both creating the ideas, programming, art,
+                music,
+                game design, and more. During the jams, I have mostly focused on the aspects of game design and
+                programming,
+                but have also contributed a bit of music here and there.
+            </p>
+            <h3>> About the Game</h3>
+            <p>
+                <b>Conjuring Carpentry</b> is a survival tower defence game where you play as a carpenter with magical
+                powers. In the daytime, you wander around the woods, chopping down trees and crafting beautiful
+                furniture. At night, your creations come alive to defend you against the horrors of the forest.
+
+                I still think the original idea was great, but it was far too ambitious for a game jam. Since we barely
+                had time to playtest, the furniture and the waves of enemies were very unbalanced. One of the furniture
+                even crashes all enemies on the whole map (we still have no idea how that happened). I spent most of my
+                time working on the enemy AI and the wave spawning mechanism. On a positive note, I finally managed to
+                    get A* path finding working in <a href="https://godotengine.org">Godot!</a>
+            </p>
+        </div>
+        <div id="footer">
+            <p> © 2024 Dethcrvsh </p>
+        </div>
+    </div>
+    <canvas id="background"></canvas>
+    <script src="scripts/build/background.js"></script>
+</body>
+
+</html>
